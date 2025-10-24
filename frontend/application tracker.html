@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GovAssist Application Tracker</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0a2a52",
+              "background-light": "#f6f7f8",
+              "background-dark": "#111821",
+            },
+            fontFamily: {
+              display: ["Public Sans"],
+            },
+            borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          },
+        },
+      };
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex h-full min-h-screen w-full flex-col">
+<header class="border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark">
+<div class="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 py-3">
+<div class="flex items-center gap-4">
+<div class="text-primary size-8">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold text-gray-900 dark:text-white">GovAssist</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Schemes</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Documents</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Profile</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center rounded-full size-10 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"></path>
+</svg>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBMSnSp-WaN0KDzdi_an7mP75rHhu1K_OW8MWK8bJqh3eiFgqHpTir7SDodFpQ7F3tGE_gIC1kE8rHTlPLTGwI7nMfzEgI1258ilR9bOup4CDR80AVc3PUpGFsN7xY9KT5zDuyMXovow0D3c4tSEebbd4iAmyvasG0eMXzyMa7aCZQfKrcwJt9j5A8BdaaJnQoUfr6_8fciLaPdbjSSPsfnMR0kXZYPEKJeScm5kcVxKkyVYsEqPbNZHX-PHV7YvN0rWQ_Vqie0kc8");'></div>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<div class="mx-auto max-w-4xl py-8 px-4 sm:px-6 lg:px-8">
+<div class="mb-8">
+<h1 class="text-3xl font-bold text-gray-900 dark:text-white">Application Tracker</h1>
+<p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Track the progress of your scheme applications.</p>
+</div>
+<div class="space-y-8">
+<div class="flex">
+<div class="flex flex-col items-center mr-4">
+<div>
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path></svg>
+</div>
+</div>
+<div class="h-full w-px bg-gray-300 dark:bg-gray-600"></div>
+</div>
+<div class="pb-8">
+<p class="font-semibold text-gray-900 dark:text-white">Submitted</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">July 15, 2024</p>
+</div>
+</div>
+<div class="flex">
+<div class="flex flex-col items-center mr-4">
+<div>
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path></svg>
+</div>
+</div>
+<div class="h-full w-px bg-gray-300 dark:bg-gray-600"></div>
+</div>
+<div class="pb-8">
+<p class="font-semibold text-gray-900 dark:text-white">Under Review</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">July 20, 2024</p>
+</div>
+</div>
+<div class="flex">
+<div class="flex flex-col items-center mr-4">
+<div>
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-green-500 text-white">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></svg>
+</div>
+</div>
+<div class="h-full w-px bg-gray-300 dark:bg-gray-600"></div>
+</div>
+<div class="pb-8">
+<p class="font-semibold text-gray-900 dark:text-white">Approved</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">July 25, 2024</p>
+</div>
+</div>
+<div class="flex">
+<div class="flex flex-col items-center mr-4">
+<div>
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-300 dark:bg-gray-700 text-gray-600 dark:text-gray-400">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M34.76,42A8,8,0,0,0,32,48V216a8,8,0,0,0,16,0V171.77c26.79-21.16,49.87-9.75,76.45,3.41,16.4,8.11,34.06,16.85,53,16.85,13.93,0,28.54-4.75,43.82-18a8,8,0,0,0,2.76-6V48A8,8,0,0,0,210.76,42c-28,24.23-51.72,12.49-79.21-1.12C103.07,26.76,70.78,10.79,34.76,42ZM208,164.25c-26.79,21.16-49.87,9.74-76.45-3.41-25-12.35-52.81-26.13-83.55-8.4V51.79c26.79-21.16,49.87-9.75,76.45,3.4,25,12.35,52.82,26.13,83.55,8.4Z"></path></svg>
+</div>
+</div>
+</div>
+<div>
+<p class="font-semibold text-gray-500 dark:text-gray-400">Completed</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">July 30, 2024</p>
+</div>
+</div>
+</div>
+<div class="mt-12">
+<h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Document Status</h2>
+<div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark overflow-hidden">
+<table class="w-full">
+<thead class="bg-gray-50 dark:bg-gray-800">
+<tr>
+<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Document Name</th>
+<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Status</th>
+<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Proof of Identity</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200">Submitted</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+<a class="text-primary hover:text-primary/80" href="#">View</a>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Address Verification</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200">Approved</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+<a class="text-primary hover:text-primary/80" href="#">View</a>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Income Statement</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-orange-100 dark:bg-orange-900/50 text-orange-800 dark:text-orange-200">Pending</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+<a class="text-primary hover:text-primary/80" href="#">Upload</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="mt-12">
+<h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Notifications</h2>
+<div class="space-y-4">
+<div class="p-4 rounded-lg bg-white dark:bg-background-dark border border-gray-200 dark:border-gray-700 flex items-start gap-4">
+<div class="flex-shrink-0 size-10 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"></path></svg>
+</div>
+<div>
+<p class="font-medium text-gray-900 dark:text-white">Your application is under review</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">July 20, 2024</p>
+</div>
+</div>
+<div class="p-4 rounded-lg bg-white dark:bg-background-dark border border-gray-200 dark:border-gray-700 flex items-start gap-4">
+<div class="flex-shrink-0 size-10 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"></path></svg>
+</div>
+<div>
+<p class="font-medium text-gray-900 dark:text-white">Application submitted successfully</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">July 15, 2024</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
