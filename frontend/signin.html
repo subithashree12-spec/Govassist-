@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GovAssist - Login</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+    body {
+      --primary-color: #0a2a52;
+      --secondary-color: #007a4e;
+      --accent-color: #f26522;
+      --background-light: #f6f7f8;
+      --background-dark: #1e293b;
+      --text-light: #f8fafc;
+      --text-dark: #0f172a;
+    }
+    .dark body {
+      --background-light: #1e293b;
+      --background-dark: #f6f7f8;
+      --text-light: #0f172a;
+      --text-dark: #f8fafc;
+    }
+  </style>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "var(--primary-color)",
+            "secondary": "var(--secondary-color)",
+            "accent": "var(--accent-color)",
+            "background-light": "var(--background-light)",
+            "background-dark": "var(--background-dark)",
+            "text-light": "var(--text-light)",
+            "text-dark": "var(--text-dark)",
+          },
+          fontFamily: {
+            "display": ["Public Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "full": "9999px"
+          },
+          boxShadow: {
+            'card': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+            'card-dark': '0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1)'
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-dark dark:text-text-light transition-colors duration-300">
+<div class="flex flex-col min-h-screen">
+<header class="bg-white/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 fixed w-full z-20">
+<div class="container mx-auto px-6 py-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-primary p-2 rounded-lg shadow-md">
+<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a9.004 9.004 0 00-8.716 6.747M12 3a9.004 9.004 0 018.716 6.747" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h1 class="text-2xl font-bold text-primary dark:text-white">GovAssist</h1>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white font-medium transition-colors" href="#">Home</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white font-medium transition-colors" href="#">Schemes</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white font-medium transition-colors" href="#">Services</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white font-medium transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-5 py-2.5 text-sm font-medium text-primary bg-white dark:bg-gray-800 border border-primary/20 dark:border-primary/40 hover:bg-primary/5 dark:hover:bg-primary/20 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md">
+              Login
+            </button>
+<button class="px-5 py-2.5 text-sm font-medium text-white bg-primary hover:bg-opacity-90 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+              Sign Up
+            </button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow flex items-center justify-center pt-24 pb-12 px-4 sm:px-6 lg:px-8 bg-grid-slate-100 dark:bg-grid-slate-700/[0.2]">
+<div class="w-full max-w-lg mx-auto">
+<div class="bg-white dark:bg-slate-900/70 backdrop-blur-xl p-8 md:p-12 rounded-xl shadow-card dark:shadow-card-dark border border-gray-200/50 dark:border-gray-700/50">
+<div class="text-center mb-10">
+<h2 class="text-4xl font-bold text-text-dark dark:text-text-light tracking-tight">
+              Sign In to Your Account
+            </h2>
+<p class="mt-3 text-base text-gray-500 dark:text-gray-400">
+              Access your personalized GovAssist dashboard.
+            </p>
+</div>
+<form action="#" class="space-y-6" method="POST">
+<div class="space-y-4">
+<div>
+<label class="sr-only" for="email-address">Email or Phone</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
+                    person
+                  </span>
+<input class="w-full pl-12 pr-4 py-3.5 border border-gray-300 dark:border-gray-600 placeholder-gray-500 dark:placeholder-gray-400 text-text-dark dark:text-text-light bg-background-light dark:bg-background-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" id="email-address" name="email" placeholder="Email or Phone" required="" type="text"/>
+</div>
+</div>
+<div>
+<label class="sr-only" for="password">Password</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
+                    lock
+                  </span>
+<input autocomplete="current-password" class="w-full pl-12 pr-4 py-3.5 border border-gray-300 dark:border-gray-600 placeholder-gray-500 dark:placeholder-gray-400 text-text-dark dark:text-text-light bg-background-light dark:bg-background-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" id="password" name="password" placeholder="Password" required="" type="password"/>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<input class="h-4 w-4 text-primary focus:ring-primary border-gray-300 dark:border-gray-600 rounded bg-background-light dark:bg-gray-800" id="remember-me" name="remember-me" type="checkbox"/>
+<label class="ml-2 block text-sm text-gray-700 dark:text-gray-300" for="remember-me">
+                  Remember me
+                </label>
+</div>
+<div class="text-sm">
+<a class="font-medium text-primary hover:text-opacity-80 transition-colors" href="#">
+                  Forgot password?
+                </a>
+</div>
+</div>
+<div>
+<button class="group relative w-full flex justify-center py-3.5 px-4 border border-transparent text-base font-medium rounded-lg text-white bg-primary hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-300 shadow-lg hover:shadow-primary/40" type="submit">
+                Login
+              </button>
+</div>
+</form>
+<div class="mt-8">
+<div class="relative">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-gray-300 dark:border-gray-600"></div>
+</div>
+<div class="relative flex justify-center text-sm">
+<span class="px-3 bg-white dark:bg-slate-900 text-gray-500 dark:text-gray-400">
+                  Or continue with
+                </span>
+</div>
+</div>
+<div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+<a class="w-full inline-flex items-center justify-center py-3 px-4 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm bg-white dark:bg-slate-800 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" href="#">
+<svg aria-hidden="true" class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 48 48">
+<path d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"></path>
+</svg>
+<span>Google</span>
+</a>
+<a class="w-full inline-flex items-center justify-center py-3 px-4 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm bg-white dark:bg-slate-800 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary" href="#">
+<span class="material-symbols-outlined mr-2 text-xl text-secondary">
+                  phonelink_lock
+                </span>
+<span>OTP Login</span>
+</a>
+</div>
+</div>
+<div class="mt-8 text-center text-sm text-gray-600 dark:text-gray-400">
+<p>Don't have an account?
+              <a class="font-medium text-primary hover:text-opacity-80 transition-colors" href="#">
+                Sign Up Now
+              </a>
+</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
